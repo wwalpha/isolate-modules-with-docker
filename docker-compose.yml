@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  test:
+    image: node-modules
+    volumes:
+      - .:/workspace
+      - ./build:/workspace/build
+      - /workspace/node_modules
+    entrypoint: tsc
