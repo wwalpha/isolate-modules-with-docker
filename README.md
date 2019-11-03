@@ -40,7 +40,7 @@ CI ツールの CloudBuild を使って、毎回`yarn install`、`yarn buld`、`
 
 <br />
 
-## How ?
+## Test methodology locally
 
 ### Create Docker Image
 [Dockerfile](./Dockerfile)
@@ -49,6 +49,7 @@ CI ツールの CloudBuild を使って、毎回`yarn install`、`yarn buld`、`
 $ docker build -t node-modules .
 Successfully built 18538e83ac54
 Successfully tagged node-modules:latest
+
 $ docker images
 REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
 node-modules               latest              18538e83ac54        49 seconds ago      143MB
@@ -61,6 +62,7 @@ node-modules               latest              18538e83ac54        49 seconds ag
 ```
 $ docker-compose up -d
 Starting isolate-modules-with-docker_test_1 ... done
+
 $ ls build
 -rw-r--r-- 1 root root 306 Nov  3 11:10 index.js
 ```
@@ -76,5 +78,7 @@ volumes:
   - ./build:/workspace/build
   - /workspace/node_modules
 ```
+
+## Finalise version
 
 ## どうのこうかがあるのか
