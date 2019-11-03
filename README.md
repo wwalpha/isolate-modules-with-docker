@@ -38,6 +38,8 @@ CI ツールの CloudBuild を使って、毎回`yarn install`、`yarn buld`、`
 - ２番目の方法は、効果は見込めるが、実装方法**ダサイ**、力技に過ぎない
 - ３番目の方法は、**効果、仕組みなど一番よい**
 
+<br />
+
 ## How ?
 
 ### Create Docker Image
@@ -59,6 +61,7 @@ $ Starting isolate-modules-with-docker_test_1 ... done
 
 ### Check Results
 
+<br />
 
 ## What's the point ?
 Local folder と Container 共有時、Container 内部の `node_modules` folderがなくなってしまったため、`- /workspace/node_modules` 最後、内部のフォルダ再マウントすると、問題解決できます。
