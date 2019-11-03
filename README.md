@@ -51,7 +51,7 @@ $ docker images
 
 ### Use Docker Image to build
 
-[docker-compose.yaml](./docker-compose.yaml)
+[docker-compose.yml](./docker-compose.yml)
 
 ```
 $ docker-compose up
