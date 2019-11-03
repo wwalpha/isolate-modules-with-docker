@@ -6,9 +6,12 @@
 
 CI ツールの CloudBuild を使って、毎回`yarn install`、`yarn buld`、`yarn test`の順に実行しています。
 
-## Issue
+<br />
 
-**`yarn install`の時間が長い（１分ほど）**、毎回インストールする時間が無駄になりますので、なんとうか解消できるかを考えました。
+## Issue
+ライブラリのインストール時間が長い（１分超え）、毎回の実行時間が無駄になりますので、なんとうか解消できるかを考えました。
+
+<br />
 
 ## Methodology
 
@@ -44,14 +47,6 @@ CI ツールの CloudBuild を使って、毎回`yarn install`、`yarn buld`、`
 ```
 $ docker build -t node-modules .
 $ docker images
-
-
-```
-
-Build 結果確認
-
-```
-$ docker images
 ```
 
 ### Use Docker Image to build
@@ -60,13 +55,11 @@ $ docker images
 
 ```
 $ docker-compose up
-$
+$ Starting isolate-modules-with-docker_test_1 ... done
 ```
 
 ### Check Results
 
 ## What's the point ?
-
-`build/index.js` がホスト側に作成される
 
 ## どうのこうかがあるのか
